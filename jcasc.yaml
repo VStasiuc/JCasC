@@ -5,13 +5,7 @@ jenkins:
       users:
         - id: "admin"
           password: "Q1w2e3r4"
-        - id: "user"
-          password: "Q1w2e3r4t5"
   authorizationStrategy:
-    globalMatrix:
+    projectMatrix:
       permissions:
         - "Overall/Administer:admin"
-        - "Overall/Read:authenticated"
-        - "Job/Build:user"
-        - "Job/Cancel:user"
-        - "Job/Read:user"

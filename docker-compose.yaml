@@ -1,6 +1,7 @@
 version: "3"
 services:
   jenkins:
+    container_name: jenkins_master_02
     build:
       context: ${CUSTOM_IMAGE_FOLDER}
     privileged: true
@@ -11,4 +12,5 @@ services:
     volumes:
       - ${HOST_JENKINS_DATA}:/var/jenkins_home
       - ${HOST_DOCKER}:/var/run/docker.sock
+    restart: always  
 
